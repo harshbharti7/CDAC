@@ -1,0 +1,213 @@
+Day 2
+-------
+Java......
+
+Author - james g.
+open source lang.
+1995 
+
+initial version - 1
+
+
+latest version  - 24 
+
+java 1.8
+
+intial name - OAK 
+
+extetions --- .java & .class  , .jar( advJava )
+
+SunMirco systems
+oracle 
+---------------------
+WORA - wirte once run anywhere
+---------------------
+
+Parts of Java 
+1. CoreJava
+2. Adv Java
+	a. j2se  java 2 std edition
+	b. j2ee  jave 2 enterprise edition
+	c. j2me  java 2 mirco edition
+	
+jdbc
+jsp
+servlet 
+spring
+spring boot
+hibernate
+--------------------------------------
+Java Features - 
+
+1. Simple 
+	-pointer
+	-multiple inheritance
+2. Platform independent 
+	- .class
+	javac Demo.java .... windows
+	.class we can run on any other OS.
+3. Compiled & interpreted
+4. OOP
+	class demo{
+	
+	}
+	
+	demo obj = new demo(); 
+5. Secure 
+6. Dynamic language
+7. high performace 
+8. robust 
+9. multithred
+10. portable & distributed
+11. architecutral 
+--------------
+class 
+	1. intance Varible
+	2. static variable
+	3. contr.
+	4. Method 	
+	5. Instace Block & static Block
+------------------------
+Variable -
+Local 
+global 
+
+
+Primitve 
+Non-primitve
+
+** Data Types
+-----------------
+1. byte   - 1 byte  -   -128 to 127
+2. short  - 2 byte  -
+3. int    - 4 byte  -    
+4. long   - 8 byte  -
+
+5. float  - 4 byte  -
+6. double - 8 byte  -
+
+7. char    - 2 byte -
+8. boolean - 1 bit  - (true / false)  
+
+9. String  - 
+
+
+dataType Name;      // declare
+dataType Name1 = 10; // Declare & initilse
+
+-----------------------------------------------
+
+Tokens -
+smallest individual part a program 
+
+indentifiers - 
+name given to class, method, variable....
+rules 
+1. shld start with char or _ or $
+2. numbers are not allowed at the start of variable name
+3. NO duplicate
+4.
+5.
+6.
+--------------------------
+Java Statements - 
+
+- if 
+- if-else
+- switch 
+
+loops
+- for
+- while
+- do-while
+
+
+1. if 
+syntax 
+if(condtion){
+statements
+statements
+
+}
+
+2. if - else
+syntax
+if(condtion){
+statements
+statements
+}
+else{
+statements
+statements
+}
+
+3. swtich
+
+Syntax
+
+switch (case){
+case :
+	statements;
+	statements;
+	break;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
