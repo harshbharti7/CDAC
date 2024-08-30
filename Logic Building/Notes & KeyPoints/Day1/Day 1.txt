@@ -1,0 +1,90 @@
+Problem Solving
+------------------
+1. what is given in statements.....
+2. requirements
+3. solution
+
+------------------------------
+Algorithm
+-----------
+- Set of instruction.....finite....
+- input then only we will output
+
+
+
+addition 2 numbers.
+
+1.take two numbers
+2. add those two num
+3. display the addition
+------------------------
+First algorithm
+1. Start 
+2.take 2 numbers
+3. add those 2 numbers
+4. display addition
+5. end
+------- 2nd VARIATIONS -----
+1. start 
+2. declare number1 , number2, result
+3. add number1 and number2 
+4. store in result
+5. display result
+6. end
+------------3rd VARIATIONS----------------
+start 
+declare number1 , number2, result
+input number 1, number2
+add number1 and number2 
+store in result
+display result
+end
+----------------------------- 
+** FLOWCHART **
+pictorial representation.....
+------------------------------
+
+find largest of two number 
+1. start
+2. declare 2 number
+3. input
+4. compare 2 number eg.....   <  , >
+5. display largest
+6. end
+
+
+--------------------------------
+print numbers divisible by two from 0 to 20......
+--------------------------------
+Java 
+----
+class Demo{
+	public static void main(String args[]){
+		System.out.println("Hello world");
+	}
+}
+
+save as .java
+
+1.to compile - javac <FileName with extention>
+	ex. javac Demo.java
+2. to run - java <ClassName without extention>
+	ex. java Demo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
