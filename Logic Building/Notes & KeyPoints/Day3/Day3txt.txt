@@ -1,0 +1,63 @@
+Day3
+----
+
+For Loop
+--------
+
+Syntax
+
+for(init;condi; incre/decre){
+
+
+}
+
+int a = 10;
+a>11;
+a = a+1;
+--------------------
+while
+
+syntax
+
+While(condition){
+statements
+statements
+
+}
+
+Do-WHILE
+-------
+
+
+
+
+
+---------
+
+
+Operators
+1. arithmetic    + , - , / , * , %
+2. logical    &&, ||, !
+3. relational   < , >, <= , >= , == , !=
+4. assignment    = , += , -=, *= , /=, %=
+		int a =1;
+		a = a +10;
+		a+=10;
+
+
+5. bitwise   &, |, ^, << , >> 
+	ex. 5 & 5
+		101 & 101
+		
+6. unary    + , - , ++ , --
+
+	post   
+	pre 
+		
+
+
+
+
+7. ternary
+8.
+
