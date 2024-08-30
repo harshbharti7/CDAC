@@ -1,0 +1,16 @@
+OS Content Discussed Day-1
+- What is OS; 
+- How is it different from other application software; 
+- Why is it hardware dependent?
+- Different components of OS
+- Basic computer organization required for OS.
+- Examples of well-known OS including mobile OS, embedded system OS, Real Time OS, desktop OS, server machine OS etc. ; 
+- How are these different from each other and why
+- Briefly discussed Functions of OS
+- Introduction to User and Kernel space and mode
+- Linux OS and its features
+- Working basics of file system of Linux
+- Commands associated with files/directories
+- other basic commands
+- What are file permissions and how to set them
+- Giving and revoking permissions using chmod for Owner, Group and Other users
