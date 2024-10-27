@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>SCA CRICKET TRIALS</title> <!--SCA CRICKET TRIALS WEB PAGE -->
+   <link rel="icon" type="image/x-icon" href="rohit.png">
+
+   <style>
+      * {
+         font-family: 'Segoe UI Light';
+      }
+      body{
+         margin:0;
+         
+
+         
+      }
+
+      nav {
+         width: 100%;
+         height: 100px;
+        box-shadow: 0px 10px 20px #eeeeee; 
+        border: 2px solid white; 
+          backdrop-filter: blur(3px);
+         -webkit-backdrop-filter: blur (3px);
+      }
+
+      #logo {
+         width: 90px;
+         height: 100px;
+      }
+
+      #nav-links {
+         position: absolute;
+         right: 40px;
+         top: 50px;
+        
+      }
+
+      #brand-name {
+         position: absolute;
+         top: 50px;
+         font-size: 18px;
+      }
+      
+      #nav-links a {
+         margin-right: 30px;
+         text-decoration: none;
+         font-size: 18px;
+         border-width: 1.5px;
+         border-color: #1976D2;
+         color: #1976D2;
+         border-style: solid;
+         padding: 10px 20px;
+         border-radius: 25px;
+         transition: background 0.4s;
+      }
+
+      #nav-links a:hover {
+         background: #1976D2;
+         color: rgb(255, 254, 254);
+      }
+
+      #intro {
+         padding: 10px 30px;
+         text-align: center;
+         background: url("cricket.jpg");
+      }
+
+      #intro #description {
+         text-align: justify;
+         
+          backdrop-filter: blur(3px);
+         -webkit-backdrop-filter: blur (3px);
+
+      }
+
+      #intro button {
+         border-width: 1.5px;
+         border-color: #1976D2;
+         color: #1976D2;
+         background: rgb(253, 251, 251);
+         padding: 10px 20px;
+         border-radius: 25px;
+         transition: background 0.4s;
+      }
+
+      #intro button:hover {
+         background: #1976D2;
+         color: white;
+      }
+
+      #row-container {
+         width: 100%;
+         height: 450px;
+         margin-top: 20px;
+         text-align: center;
+      }
+
+      #section-1 {
+         width: 33%;
+         height: inherit;
+         display: inline-block;
+         padding-top: 20px;
+      }
+
+      #section-2 {
+         width: 33%;
+         height: inherit;
+         display: inline-block;
+         padding-top: 20px;
+      }
+
+      #section-3 {
+         width: 33%;
+         height: inherit;
+         display: inline-block;
+         padding-top: 20px;
+      }
+      #aboutsca{
+         color: rgb(248, 252, 253) ;
+         
+      }
+      .cr{
+         width: 500px;
+         height: 430px;
+         
+
+      }
+      .ck{
+         border: 10px black;
+      }
+
+      
+   </style>
+</head>
+
+<body>
+   <nav id="nav1">
+      <img src="rohit.png" id="logo">
+      
+      <span id="brand-name">SCA : Students Cricket Association</span>
+      <div id="nav-links">
+         <a href="webpage.html">Home</a>
+         <a href="webpage.html">About Us</a>
+         <a href="contactus.html">Contact Us</a>
+         <a href="signup.html">Sign Up</a>
+         <a href="login.html">Login</a>
+         
+      </div>
+   </nav>
+   <div id="intro">
+      <h2 id="aboutsca"><b> Winter Trials </b> : Students Cricket Association </h2>
+      <div id="description">
+         
+         <p>The Student Cricket Association (SCA) is a vibrant and dynamic
+            organization dedicated to promoting the sport of cricket among students.
+            Our mission is to foster a love for cricket, develop skills, and encourage sportsmanship and teamwork.
+         </p>
+         <ul type="circle" class="aboutpoints">
+            <li><b>Summer and Winter Camp Trials: </b> Enhancing the cricketing skills of students.</li>
+            <li><b>Skill Development:</b> Provide training sessions and workshops to enhance the cricketing skills of students.</li>
+            <li><b>Competitions: </b> Organize inter-college and inter-school tournaments to offer competitive playing opportunities.</li>
+            <li><b>Community Building: </b>Create a supportive community where students can share their passion for cricket and build lasting friendships </li>
+            <li> <b> Health and Fitness:</b>  Promote physical fitness and a healthy lifestyle through regular practice and matches.</li>
+         </ul>
+      </div>
+      <button  onclick="window.location.href = 'signup.html';">Apply For The Winter Trials </button>
+   </div>
+   <div id="row-container">
+      <div id="section-1">
+         <img src="bat.png" id="bat" class="cr">
+         <h3 class="ck">Batsman</h3>
+         <p>Calling all aspiring batsmen!. This is a fantastic opportunity to showcase your skills, dedication, and passion for cricket. 
+            We look forward to seeing you there and discovering the potential you bring to the game!
+            Show us what you've got! </p>
+            <button  onclick="window.location.href = 'signup.html';">Batsman</button>
+      </div>
+      <div id="section-2">
+         <img src="bowl.png" id="bowl" class="cr">
+         <h3 class="ck">Bowler</h3>
+         <p>Are you ready to showcase your bowlings skills? This is a fantastic opportunity to showcase yours skills.
+            We look forward to seeing you there and discovering the potential you bring to the game!
+            Show us what you've got!
+         </p>
+         <button  onclick="window.location.href = 'signup.html';">Bowler</button>
+      </div>
+      <div id="section-3">
+         <img src="wk.png" id="wk" class="cr">
+         <h3 class="ck">Wicket-Keeper</h3>
+         <p>Are you a freek behind the wickets? This is a fantastic opportunity to showcase yours skills.
+            We look forward to seeing you there and discovering the potential you bring to the game!
+            Show us what you've got!</p>
+            <button  onclick="window.location.href = 'signup.html';">Wicket-Keeper</button>
+      </div>
+      <br><p id="hb">© H@R$H (hb_cricketer7) </p>
+   
+</div>
+      
+
+</body>
+
+</html>
