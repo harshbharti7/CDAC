@@ -1,0 +1,86 @@
+Assignment 12
+Question 1
+Write a query that selects all customers whose ratings are equal to or greater than ANY of Serres’.
+mysql> select * from customers
+    -> where Rating>=Any(
+    -> select Rating from customers
+    -> where Snum=1002
+    -> );
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2002 | Giovanni | Rome     |    200 | 1003 |
+| 2003 | Liu      | San Jose |    200 | 1002 |
+| 2004 | Grass    | Berlin   |    300 | 1002 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
++------+----------+----------+--------+------+
+4 rows in set (0.01 sec)
+mysql> select * from customers
+    -> where Rating>=Any(
+    -> select Rating from customers
+    -> where Snum=(
+    -> select Snum from salesperson where Sname='Serres')) as abcd);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as abcd)' at line 5
+
+
+Question 2
+Write a query using ANY or ALL that will find all salespeople who have no customers located in their city.
+mysql> select * from salesperson s
+    -> where not exists
+    -> (select 1 from customers c
+    -> where c.snum=s.snum and c.city=s.city);
++------+---------+-----------+------+
+| Snum | Sname   | City      | Comm |
++------+---------+-----------+------+
+| 1004 | Motika  | London    | 0.11 |
+| 1007 | Rifkin  | Barcelona | 0.15 |
+| 1003 | Axelrod | New York  | 0.10 |
++------+---------+-----------+------+
+3 rows in set (0.01 sec)
+
+Question 3
+Write a query that selects all orders for amounts greater than any for the customers in London.
+mysql> SELECT *
+    -> FROM orders O
+    -> WHERE Amt > ANY (
+    ->SELECT Amt
+    ->FROM orders
+    ->WHERE Cnum IN (
+    ->SELECT Cnum
+    ->FROM customers
+    ->WHERE City = 'London'
+    ->     )
+    -> );
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3002 | 1900.10 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5610.45 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713.23 | 1990-10-04 | 2002 | 1003 |
+| 3008 | 4723.00 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309.95 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891.88 | 1990-10-06 | 2006 | 1001 |
++------+---------+------------+------+------+
+7 rows in set (0.01 sec)
+
+Question 4
+Write the above query using MIN or MAX
+mysql> SELECT *
+    -> FROM orders
+    -> WHERE Amt > (SELECT MIN(Rating)
+    ->FROM customers
+    ->WHERE City = 'London');
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3003 |  767.19 | 1990-10-03 | 2001 | 1001 |
+| 3002 | 1900.10 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5610.45 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713.23 | 1990-10-04 | 2002 | 1003 |
+| 3008 | 4723.00 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309.95 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891.88 | 1990-10-06 | 2006 | 1001 |
++------+---------+------------+------+------+
+8 rows in set (0.00 sec)

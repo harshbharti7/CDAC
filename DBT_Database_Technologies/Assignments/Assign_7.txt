@@ -1,0 +1,86 @@
+Assignment 7
+Question 1
+Write a query that counts all orders for October 3.
+mysql> select count(*) from orders where odate='1990-10-03';
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.01 sec)
+
+
+Question 2
+Write a query that counts the number of different non-NULL city values in the Customers table.
+mysql> select count(distinct City) as City from customers where city is not null;
++------+
+| City |
++------+
+|    4 |
++------+
+1 row in set (0.01 sec)
+
+Question 3
+Write a query that selects each customer’s smallest order.
+mysql> select orders.Cnum as 'CID', Customers.cname as 'Name',Customers.City,min(amt) as 'Smallest order' from orders,cu
+stomers
+    -> where orders.cnum=customers.cnum
+    -> group by orders.cnum,Customers.cname,Customers.city;
++------+----------+----------+----------------+
+| CID  | Name     | City     | Smallest order |
++------+----------+----------+----------------+
+| 2008 | Cisneros | San Jose |          18.69 |
+| 2001 | Hoffman  | London   |         767.19 |
+| 2007 | Pereira  | Rome     |        1900.10 |
+| 2003 | Liu      | San Jose |        5610.45 |
+| 2002 | Giovanni | Rome     |        1713.23 |
+| 2004 | Grass    | Berlin   |          75.75 |
+| 2006 | Clemens  | London   |        4723.00 |
++------+----------+----------+----------------+
+7 rows in set (0.00 sec)
+
+Question 4
+Write a query that selects the first customer, in alphabetical order, whose name begins with G.
+mysql> select * from customers
+    -> where Cname >='G' and Cname<'H'
+    -> order by 2;
++------+----------+--------+--------+------+
+| Cnum | Cname    | City   | Rating | Snum |
++------+----------+--------+--------+------+
+| 2002 | Giovanni | Rome   |    200 | 1003 |
+| 2004 | Grass    | Berlin |    300 | 1002 |
++------+----------+--------+--------+------+
+2 rows in set (0.00 sec)
+
+Question 5
+Write a query that selects the highest rating in each city
+mysql> select t.Cnum,t.Cname,t.City,t.Rating
+    -> from Customers t
+    -> where (t.City,t.Rating) in(
+    -> select City,max(Rating) from Customers
+    -> Group by City);
++------+----------+----------+--------+
+| Cnum | Cname    | City     | Rating |
++------+----------+----------+--------+
+| 2001 | Hoffman  | London   |    100 |
+| 2002 | Giovanni | Rome     |    200 |
+| 2004 | Grass    | Berlin   |    300 |
+| 2006 | Clemens  | London   |    100 |
+| 2008 | Cisneros | San Jose |    300 |
++------+----------+----------+--------+
+5 rows in set (0.01 sec)
+
+Question 6
+Write a query that counts the number of salespeople registering orders for each day. (If a salesperson has more than one order on a given day, he or she should be counted only once).
+mysql> select Odate,count(distinct Snum) from orders
+    -> group by Odate;
++------------+----------------------+
+| Odate      | count(distinct Snum) |
++------------+----------------------+
+| 1990-10-03 |                    4 |
+| 1990-10-04 |                    2 |
+| 1990-10-05 |                    1 |
+| 1990-10-06 |                    2 |
++------------+----------------------+
+4 rows in set (0.01 sec)
+

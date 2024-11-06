@@ -1,0 +1,44 @@
+Question 1.
+mysql> create table salesperson(Snum int(4), Sname varchar(10),City varchar(10),Comm float(3,2));
+Query OK, 0 rows affected, 2 warnings (0.04 sec)
+mysql> insert into salesperson(Snum,Sname,City,Comm) values(1001,'Peel','London',0.12);
+mysql> insert into salesperson(Snum,Sname,City,Comm) values(1002,'Serres','San Jose',0.13);
+mysql> insert into salesperson(Snum,Sname,City,Comm) values(1003,'Motika','London',0.11);
+mysql> insert into salesperson(Snum,Sname,City,Comm) values(1004,'Rifkin','Barcelona',0.15);
+(0.00 sec)
+mysql> insert into salesperson(Snum,Sname,City,Comm) values(1003,'Axelrod','New York',0.10);
+Question 2
+mysql> create table Customer (Cnum int(4), Cname varchar(10),City varchar(10),Rating int(4),Snum int(4));
+Query OK, 0 rows affected, 3 warnings (0.03 sec)
+mysql> insert into customer (Cnum,Cname,City,rating,snum) values(2001,'Hoffman','London',100,1001);
+mysql> insert into customer (Cnum,Cname,City,rating,snum) values(2002,'Giovanni','Rome',200,1003);
+mysql> insert into customer (Cnum,Cname,City,rating,snum) values(2003,'liu','San Jose',200,1002);
+mysql> insert into customer (Cnum,Cname,City,rating,snum) values(2004,'Grass','Berline',300,1002);
+mysql> insert into customer (Cnum,Cname,City,rating,snum) values(2006,'Clemens','London',100,1001);
+(0.02 sec)
+mysql> insert into customer (Cnum,Cname,City,rating,snum) values(2008,'Cisneros','San Jose',300,1007);
+mysql> insert into customer (Cnum,Cname,City,rating,snum) values(2007,'Pereira','Rome',100,1004);
+Question 3
+mysql> create table orders (Onum int(4),Amt float(7,2),Odate date,Cnum int(4),Snum int(4));
+Query OK, 0 rows affected, 4 warnings (0.02 sec)
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3001,18.69,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2008,1007);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3001,18.69,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2008,1007);
+insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3003,767.19
+,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2001,1001);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3002,1900.1
+0,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2007,1004);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3002,1900.10,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2007,1004);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3005,516.45
+,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2003,1002);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3006,1098.1
+6,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2008,1007);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3009,1713.2
+3,STR_TO_DATE('03-OCT-1990','%d-%b-%Y'),2002,1003);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3007,75.75,
+STR_TO_DATE('04-OCT-1990','%d-%b-%Y'),2004,1002);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3008,4723.0
+0,STR_TO_DATE('04-OCT-1990','%d-%b-%Y'),2006,1001);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3010,1309.9
+5,STR_TO_DATE('06-OCT-1990','%d-%b-%Y'),2004,1002);
+mysql> insert into orders (Onum,Amt,Odate,Cnum,Snum) values(3011,9891.8
+8,STR_TO_DATE('06-OCT-1990','%d-%b-%Y'),2006,1001);

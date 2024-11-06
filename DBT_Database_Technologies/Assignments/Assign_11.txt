@@ -1,0 +1,45 @@
+Assignment 11
+Question 1
+Write a query that uses a subquery to obtain all orders for the customer named Cisneros. Assume you do not know his customer number (cnum).
+mysql> select * from orders
+    -> where Cnum=(
+    -> select Cnum from customers where Cname='Cisneros');
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3001 |   18.69 | 1990-10-03 | 2008 | 1007 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
++------+---------+------------+------+------+
+2 rows in set (0.00 sec)
+
+
+Question 2
+Write a query that produces the names and ratings of all customers who have above-average orders.
+mysql> select Cname,Rating from customers
+    -> where Rating>(
+    -> select avg(Rating) from customers);
++----------+--------+
+| Cname    | Rating |
++----------+--------+
+| Giovanni |    200 |
+| Liu      |    200 |
+| Grass    |    300 |
+| Cisneros |    300 |
++----------+--------+
+
+Question 3
+Write a query that selects the total amount in orders for each salesperson for whom this total is greater than the amount of the largest order in the table.
+mysql> select salesperson.Sname,salesperson.Snum from orders,salesperson
+    -> group by salesperson.Sname,salesperson.Snum
+    -> having sum(orders.Amt)>(
+    -> select max(Amt) from orders);
++---------+------+
+| Sname   | Snum |
++---------+------+
+| Axelrod | 1003 |
+| Rifkin  | 1007 |
+| Motika  | 1004 |
+| Serres  | 1002 |
+| Peel    | 1001 |
++---------+------+
+5 rows in set (0.00 sec)
