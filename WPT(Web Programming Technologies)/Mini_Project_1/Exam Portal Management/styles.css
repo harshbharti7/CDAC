@@ -1,0 +1,19 @@
+/* Navbar custom styles */
+.navbar {
+    background-color: #007bff; /* Blue background */
+}
+
+.navbar .nav-link {
+    color: #ffffff !important; /* White text color */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #5efa03 !important; /* Light Green text on hover */
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+h5{
+    color: #ffffff !important;
+}
+
